@@ -1,3 +1,3 @@
-/home/pascal/Coding/OTH/pg1-lectures/float-to-binary/cmake-build-debug/CMakeFiles/float_to_binary.dir
-/home/pascal/Coding/OTH/pg1-lectures/float-to-binary/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/pascal/Coding/OTH/pg1-lectures/float-to-binary/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/pascal/Coding/projects/float-to-binary/cmake-build-debug/CMakeFiles/float_to_binary.dir
+/home/pascal/Coding/projects/float-to-binary/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/pascal/Coding/projects/float-to-binary/cmake-build-debug/CMakeFiles/rebuild_cache.dir

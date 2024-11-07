@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/pascal/Coding/OTH/pg1-lectures/float-to-binary/cmake-build-debug",
-		"source" : "/home/pascal/Coding/OTH/pg1-lectures/float-to-binary"
+		"build" : "/home/pascal/Coding/projects/float-to-binary/cmake-build-debug",
+		"source" : "/home/pascal/Coding/projects/float-to-binary"
 	},
 	"version" : 
 	{

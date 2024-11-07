@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/pascal/Coding/OTH/pg1-lectures/float-to-binary/cmake-build-debug"
+			"value" : "/home/pascal/Coding/projects/float-to-binary/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -415,7 +415,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/pascal/Coding/OTH/pg1-lectures/float-to-binary/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/pascal/Coding/projects/float-to-binary/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -475,7 +475,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/pascal/Coding/OTH/pg1-lectures/float-to-binary"
+			"value" : "/home/pascal/Coding/projects/float-to-binary"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1035,7 +1035,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/pascal/Coding/OTH/pg1-lectures/float-to-binary/cmake-build-debug"
+			"value" : "/home/pascal/Coding/projects/float-to-binary/cmake-build-debug"
 		},
 		{
 			"name" : "float_to_binary_IS_TOP_LEVEL",
@@ -1059,7 +1059,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/pascal/Coding/OTH/pg1-lectures/float-to-binary"
+			"value" : "/home/pascal/Coding/projects/float-to-binary"
 		}
 	],
 	"kind" : "cache",

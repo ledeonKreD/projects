@@ -1,22 +1,41 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 
-//for float data type:
+//for float data type (4 bytes):
 #define LEN_EXPONENT    8
 #define LEN_MANTISSA    23
+#define BIAS            127
+
+//TODO: find out why the fuck first loop in floatToBinary() switches to 0 when 1 would be reached
 
 
-int main(int argc, char **argv) {
-    float numba = atof(argv[1]);
-    int float_binary[32];
-    unsigned int sign = 0;
-    if (numba < 0.0) {
-        sign = 1;
+//this sucks ass
+int *floatToBinary(const float num) {
+    int len = LEN_EXPONENT + LEN_MANTISSA + 1;
+    int *arr = malloc((len * sizeof(int)));
+
+    //digits before point
+    int i_num = num;
+    //digits after point
+    float f_num = num - i_num;
+
+    //convert numbers after decimal point to binary
+    int i = len - 1;
+    while(f_num < 1.0 && f_num != 0.0) {
+        arr[i] = f_num * 2.0;
+        f_num = f_num * 2.0;
+        f_num -= arr[i];
+        i--;
+    }
+    while(i_num > 0) {
+       arr[i] = i_num % 2;
+       i_num = i_num / 2;
+       i--;
     }
 
-    return 0;
+    return arr;
 }
-
 //Convert integer number to binary
 //returns pointer to array containing the binary number
 int *manToBinary(int number) {
@@ -64,4 +83,14 @@ void invert(int *array, int len) {
             array[i] = 1;
         }
     }
+}
+
+int main(int argc, char **argv) {
+    float numba = atof(argv[1]);
+    int *bin = floatToBinary(numba);
+    for(int i = 0; i < 32; i++) {
+        printf("%d", bin[i]);
+    }
+
+    return 0;
 }
