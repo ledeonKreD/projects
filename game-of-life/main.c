@@ -13,8 +13,10 @@
 #define RIGHT	'l'
 #define CURSOR 'O'
 
-//TODO: implement choices for tickspeed and variable size
-//	Cursor works, make prettier
+//TODO:
+//fix and refactor
+//implement choices for tickspeed and variable size
+//Cursor works, make prettier
 
 long int tickspeed = 100;
 
@@ -183,25 +185,29 @@ int main()
 					int neighbors;
 					neighbors = checkNeighbor(row, col);
 
-					if( neighbors < 2 )				//1st Rule: Live cell dies with <2 live neighbors
+					//1st Rule: Live cell dies with <2 live neighbors
+					if( neighbors < 2 )
 					{
 						Field_new[row][col] = DEAD;
 					}
-					else if( neighbors == 2 || neighbors == 3 )	//2nd Rule: Live cell stays alive with 2-3 live neighbors
+                    //2nd Rule: Live cell stays alive with 2-3 live neighbors
+					else if( neighbors == 2 || neighbors == 3 )
 					{
 						Field_new[row][col] = LIVE;
 					}
-					else if( neighbors > 3 )			//3rd Rule: Live cell dies with more >3 neighbors
+                    //3rd Rule: Live cell dies with more >3 neighbors
+					else if( neighbors > 3 )
 					{
 						Field_new[row][col] = DEAD;
 					}
+                    //4th Rule: Dead cell comes to live with exactly 3 live neighbors
+					else if( checkNeighbor(row, col) == 3 )
+					{
+						Field_new[row][col] = LIVE;
+                    }
 				}
-				else if( checkNeighbor(row, col) == 3 )			//4th Rule: Dead cell comes to live with exactly 3 live neighbors
-				{
-					Field_new[row][col] = LIVE;
-				};
 			}
-		};
+		}
 
 		//copy newly set field back to primary field
 		for( int row = 0; row < SIZE_ROW; ++row )
