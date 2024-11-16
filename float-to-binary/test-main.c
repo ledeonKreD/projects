@@ -11,7 +11,6 @@
 //fraction: 22-0
 
 //TODO:
-//remove array assignment
 
 
 void printArray(int *arr) {
@@ -37,7 +36,7 @@ int *floatToBinary(const float num) {
 
 	//split digits before and after decimal point respectively
 	int i_num = abs_num;
-	float f_num = num - i_num;
+	float f_num = abs_num - i_num;
 	
 	//convert integer part to binary
 	//read from front
@@ -68,14 +67,14 @@ int *floatToBinary(const float num) {
 	printArray(arr_frac);
 
 	int exponent = 0;
-	if(num < 1.0) {
+	if(abs_num < 1.0) {
 		exponent = -lead_frac - 1;
 	}
 	else{
 		exponent = len_int - 1;
 		int point = exponent;
 	}
-	printf("%d\n", exponent);
+	printf("%s%d\n", "Exponent: ", exponent);
 	exponent += BIAS;
 
 	for(int i = LEN_EXPONENT; i > 0; i--) {
