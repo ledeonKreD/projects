@@ -11,6 +11,7 @@
 
 //TODO:
 //  align the bits "to the left"
+//  fix printNumba function
 //  make some nice output
 //  convert function needs to add 1 after conversion
 //  find out why the fuck first loop in floatToBinary() switches to 0 when 1 would be reached
@@ -97,6 +98,7 @@ int *floatToBinary(const float num) {
         f_num -= arr[index];
         index--;
     }
+    index--;
     point = index;
 
     //convert numbers before decimal point
@@ -113,6 +115,10 @@ int *floatToBinary(const float num) {
 
     //get exponent and apply bias,
     //set the msb 0 as the byte is not needed for representation
+<<<<<<< HEAD
+=======
+    //printf("%d\n", msb);
+>>>>>>> 8c1a13d2093cd5eb6afd93282a3d62681b7a5b29
     exp = point - msb;
     printf("%d\n", exp);
     exp += BIAS;
@@ -155,7 +161,12 @@ int main(int argc, char **argv) {
     for(int i = 0; i < LEN_ARRAY; i++) {
         printf("%d", bin[i]);
     }
+<<<<<<< HEAD
     printf("\n");
     free(bin);
+=======
+    //printNumba(bin);
+
+>>>>>>> 8c1a13d2093cd5eb6afd93282a3d62681b7a5b29
     return 0;
 }
