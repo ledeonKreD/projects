@@ -25,7 +25,6 @@ char Field[SIZE_ROW][SIZE_COL];
 
 //auxillary Field, 2nd generation gets set there
 char Field_new[SIZE_ROW][SIZE_COL];
-
 //print the contents of the Field as char
 void printField(char Array[SIZE_ROW][SIZE_COL])
 {

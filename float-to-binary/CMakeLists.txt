@@ -3,4 +3,5 @@ project(float_to_binary C)
 
 set(CMAKE_C_STANDARD 17)
 
-add_executable(float_to_binary main.c)
+add_executable(float_to_binary main.c
+)
